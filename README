@@ -1,0 +1,5 @@
+# ScratchOS
+This is a small project I'll be working on in my free time. Mostly reading out of [Writing a Simple Operating System — from Scratch](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf) by Nick Blundell.
+
+## Goals
+The ultimate goal is an incredibly small and fast operating system akin to the early days of pre-networking computing. Interfacing with some devices such as printers, displays, and other devices will eventually be supported.
