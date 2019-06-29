@@ -1,17 +1,22 @@
-mov ah, 0x0e
+[org 0x7c00]
 
-mov al, 'H'
-int 0x10
-mov al, 'e'
-int 0x10
-mov al, 'l'
-int 0x10
-mov al, 'l'
-int 0x10
-mov al, 'o'
-int 0x10
+init:
+	mov si, hello
+	mov ah, 0x0e
 
-jmp $
+print_char:
+	lodsb
+	cmp al, 0
+	je done
+	int 0x10
+	jmp print_char
+
+done:
+	hlt
+
+hello:
+	db "Hello, world!", 0
+
 
 times 510-($-$$) db 0
 dw 0xaa55
